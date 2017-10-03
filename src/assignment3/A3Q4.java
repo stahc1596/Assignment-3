@@ -11,25 +11,27 @@ package assignment3;
 public class A3Q4 {
 
     public void countingSort(int[] array){
+        int[] count = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         for(int i = 0; i < array.length; i++){
-            int[] count = new int[10];
             count[array[i]]++;
+        }
+        for(int i = 0; i < count.length; i++){
+            for(int n = 0; n < count[i]; n++){
+                System.out.println(i);
+            }
         }
     }
     public static void main(String[] args) {
         A3Q4 test = new A3Q4();
-        int[] numbers = new int[10];
-        for(int i = 0; i < numbers.length; i++){
-            numbers[i] = (int)(Math.random()*11);
-        }
+        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         for(int i = 0; i < numbers.length; i++){
             System.out.println(numbers[i]);
         }
         System.out.println("-----------------------------");
         test.countingSort(numbers);
-        for(int i = 0; i < numbers.length; i++){
-            System.out.println(numbers[i]);
-        }
         
+//        for(int i = 0; i < numbers.length;i++){
+//            System.out.println(numbers[i]);
+//        }
     }
 }
